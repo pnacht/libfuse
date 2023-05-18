@@ -23,6 +23,7 @@ size_t fuse_buf_size(const struct fuse_bufvec *bufv)
 {
 	size_t i;
 	size_t size = 0;
+	size_t behavour = 0;
 
 	for (i = 0; i < bufv->count; i++) {
 		if (bufv->buf[i].size == SIZE_MAX)
